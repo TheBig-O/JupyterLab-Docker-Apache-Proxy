@@ -27,9 +27,6 @@ So without further ado, here's the solution that worked for me.
         ProxyPassReverse "/" "http://192.168.1.186:8888/"
           LogLevel Debug
 
-#               DocumentRoot /var/www/html
-#                DocumentRoot /mnt/8tb/_webdir
-
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 
