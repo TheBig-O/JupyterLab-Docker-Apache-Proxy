@@ -7,7 +7,7 @@ Everything seemed to work when I browsed to the proxied web address except that 
 
 For a basic setup rundown, I have my primary web server on a Raspberry Pi and my JupyterLab set up on a machine that runs all my Docker containers. So, my SSL certificates and all the other basic web parts are on the Pi. Everything else is proxied in from Docker. My solution to establish a kernel connection had to do with the WebSockets. Apache requires that you specifically address WebSockets when you proxy a web service in. This is unique to Apache, as other web servers that support WebSockets will automatically perform this task for you. (The WebSocket API makes it possible to open a two-way interactive communication session between the user's browser and a server. With this, you can send messages to a server and receive event-driven responses. This is critical for JupyterLab.)  
 
-> Important thing to note: The entry for WebSockets should be in the beginning.  
+> Important thing to note: The entry for WebSockets should be before the main proxy statements.  
 
 So without further ado, here's the solution that worked for me.  
   
